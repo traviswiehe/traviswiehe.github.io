@@ -1,89 +1,350 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+<!--
+Gold color is #D4AF37
+Light blue is #A0D5F3
+    I am going to totally redo this bag
+  -->
+<HTML>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.3.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.3.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.3.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<HEAD>
+    <TITLE> Travis Wiehe</TITLE>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+    <style>
+        body {
+            background-color: #0000;
+            font-size: 20px;
+            font-family: "Times New Roman", Georgia, Serif;
+            margin-top: 20px;
         }
-      });
-    </script>
-  </body>
-</html>
+
+        a:link {
+            color: blue;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        .important {
+            font-weight: bold;
+            text-decoration: underline;
+            font-size: 24px;
+        }
+
+        table.table1 {
+            border-collapse: collapse;
+        }
+
+        table.table1,
+        td,
+        th {
+            border: 3px solid black;
+        }
+
+        table.table2 {}
+
+        table.table2,
+        td,
+        th {
+            border: 0px solid black;
+        }
+
+        .BottomFont {
+            font-size: 24px;
+        }
+
+        .box img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box1 img {
+            object-fit: cover;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+        }
+
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .container:hover .image {
+            opacity: 0.3;
+        }
+
+        .container:hover .middle {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: #555555;
+            color: white;
+            font-size: 24px;
+            padding: 16px 32px;
+        }
+    </style>
+</HEAD>
+
+
+<BODY style="background-color:#fff" height="2000" fontsize="30px">
+
+    <table width="100% " style="background-color:#FFF" style="font-family:'Courier New'">
+        <tr>
+            <th style="font-size:30px">
+            <td width="50%" style="font-size:36px">
+                <CENTER><b>TRAVIS WIEHE</b></CENTER>
+            </td>
+
+
+            </th>
+            <th style="font-size:36px">
+                <CENTER>
+            <td style="font-size:36px"><A style="text-decoration: none" href="index.html" target="_self"><b>
+                        <Center>WORK</Center>
+                    </b></A></td>
+            <td style="font-size:36px"><A style="text-decoration: none" href="me.html" target="_self"><b>
+                        <Center>ABOUT ME</Center>
+                    </b></A></td>
+            <td><A HREF="www.linkedin.com/in/travis-wiehe-engineering" target="_blank"><img src="linkedin.png"
+                        alt="LinkedIn" class="image" style="width:30px;height:30px;"></A></td>
+
+
+
+
+            </CENTER>
+            </th>
+        </tr>
+
+    </table>
+
+
+
+    <TABLE width="100%" border="0" bordercolor="white" cellspacing="20">
+        <TR width="90%">
+            <td width="30%" style="background-color:DEDEDE">
+                <div class="container">
+                    <A style="text-decoration: none" href="mountainart.html" target="_blank">
+                        <img src="lightUpMountainsSquare.jpg" alt="Avatar" class="image" style="width:100%">
+                    </A>
+                    <div class="middle">
+                        <A style="text-decoration: none" href="mountainart.html" target="_blank">
+                            <div class="text">
+                                <Center>Mountain Wall Art</Center>
+                            </div>
+                        </A>
+                    </div>
+                </div>
+            </td>
+
+            <td width="30%" style="background-color:DEDEDE">
+                <div class="container">
+                    <A style="text-decoration: none" href="fea.html" target="_blank">
+                        <img src="stressSquare.jpg" alt="Finite Element Analysis" class="image" style="width:100%">
+                    </A>
+                    <div class="middle">
+                        <A style="text-decoration: none" href="fea.html" target="_blank">
+                            <div class="text">
+                                <Center>Finite Element Analysis</Center>
+                            </div>
+                        </A>
+                    </div>
+                </div>
+            </td>
+
+            <td width="30%" style="background-color:DEDEDE">
+                <div class="container">
+                    <A style="text-decoration: none" href="fish.html" target="_blank">
+                        <img src="fishcover.PNG" alt="Fish Propulsion" class="image" style="width:100%">
+                    </A>
+                    <div class="middle">
+                        <A style="text-decoration: none" href="fish.html" target="_blank">
+                            <div class="text">
+                                <Center>Fish Propulsion</Center>
+                            </div>
+                        </A>
+                    </div>
+                </div>
+            </td>
+
+        </TR>
+
+        <TR width="90%">
+            <td width="30%" style="background-color:DEDEDE">
+                <div class="container">
+                    <A style="text-decoration: none" href="beam.html" target="_blank">
+                        <img src="vibescover.PNG" alt="Beam Vibration" class="image" style="width:100%">
+                    </A>
+                    <div class="middle">
+                        <A style="text-decoration: none" href="beam.html" target="_blank">
+                            <div class="text">
+                                <Center>Beam Vibration</Center>
+                            </div>
+                        </A>
+                    </div>
+                </div>
+            </td>
+
+            <td width="30%" style="background-color:DEDEDE">
+                <div class="container">
+                    <A style="text-decoration: none" href="flip.html" target="_blank">
+                        <img src="FOM/fomcover.png" alt="Design Process" class="image" style="width:100%">
+                    </A>
+                    <div class="middle">
+                        <A style="text-decoration: none" href="flip.html" target="_blank">
+                            <div class="text">
+                                <Center>Design Process</Center>
+                            </div>
+                        </A>
+                    </div>
+                </div>
+            </td>
+
+            <td width="30%" style="background-color:DEDEDE">
+                <div class="container">
+                    <A style="text-decoration: none" href="lamp.html" target="_blank">
+                        <img src="lampfinal.jpg" alt="Beam Vibration" class="image" style="width:100%">
+                    </A>
+                    <div class="middle">
+                        <A style="text-decoration: none" href="lamp.html" target="_blank">
+                            <div class="text">
+                                <Center>Desk Lamp</Center>
+                            </div>
+                        </A>
+                    </div>
+                </div>
+            </td>
+
+        </TR>
+
+        <TR width="90%">
+            <td width="30%" style="background-color:DEDEDE">
+                <div class="container">
+                    <A style="text-decoration: none" href="wallet.html" target="_blank">
+                        <img src="wall1opencover.jpg" alt="Wooden Wallet" class="image" style="width:100%">
+                    </A>
+                    <div class="middle">
+                        <A style="text-decoration: none" href="wallet.html" target="_blank">
+                            <div class="text">
+                                <Center>Wooden Wallet</Center>
+                            </div>
+                        </A>
+                    </div>
+                </div>
+            </td>
+
+            <td width="30%" style="background-color:DEDEDE">
+                <div class="container">
+                    <A style="text-decoration: none" href="chess.html" target="_blank">
+                        <img src="boardcover.jpg" alt="Chessboard" class="image" style="width:100%">
+                    </A>
+                    <div class="middle">
+                        <A style="text-decoration: none" href="chess.html" target="_blank">
+                            <div class="text">
+                                <Center>Wooden Chessboard</Center>
+                            </div>
+                        </A>
+                    </div>
+                </div>
+            </td>
+
+            <td width="30%" style="background-color:DEDEDE">
+                <div class="container">
+                    <A style="text-decoration: none" href="SnowAccumulationForcast.html" target="_blank">
+                        <img src="PWL.jpg" alt="Avatar" class="image" style="width:100%">
+                    </A>
+                    <div class="middle">
+                        <A style="text-decoration: none" href="" target="_blank">
+                            <div class="text">
+                                <Center>Snow Report</Center>
+                            </div>
+                        </A>
+                    </div>
+                </div>
+            </td>
+
+        </TR>
+
+    </TABLE>
+    <BR>
+
+
+    <!--
+
+
+
+
+    <img src="balloon.jpg" alt="a balloon"></div>
+        <CENTER><IMG SRC="rubixcube.gif" ALT="Rubik's Cube" width="175" height="100"></CENTER><BR>
+    <A HREF="newwebsite.html" target="_blank">new site</A>
+        <Center>
+            <TABLE class="table1">
+                <TR>
+                    <TH><A HREF="https://www.websudoku.com" target="_blank">Sudoku</A>
+                    <TH><A HREF="https://www.echalk.co.uk/amusements/Games/Tetrominoes/tetrominoes.html" target="_blank">Tetris</A>
+                    <TH><A HREF="https://pacman-e281c.firebaseapp.com/" target="_blank">Pacman</A><U></TH>
+                    <TH>GeoGuessr
+                    <TH><A HREF="http://www.chezpoor.com/minesweeper/minecore.html" target="_blank">MineSweeper</A>
+                <TR align="center">
+                    <TD><div class="important"> High Score</div> Caleb Hanes Bender<br> 4 minutes 46 seconds <BR>
+                    <TD><div class="important">Level 1 High Score</div>Graham Jeffe<BR> 107,455 <BR>
+                    <TD><div class="important"> High Score </div>Tilman Cooper<BR> 1,722,050
+                    <TD><A HREF="https://geoguessr.com/world/play" target="_blank">World</A><BR><div class="important"> High Score</div> Annika N. Christensen <BR> 24,835
+                    <TD><div class="important">Beginner High Score:</div>Travis Wiehe<BR> 6 seconds
+                <TR align="center">
+                    <TD>
+                    <TD>
+                    <TD>
+                    <TD><A HREF="https://geoguessr.com/usa/play" target="_blank"> USA </A><BR><div class="important"> High Score</div>Caleb Hanes Bender <BR> 24,552
+                    <TD><div class="important">Intermediate High Score </div>Caleb Hanes Bender<BR> 55 seconds
+                <TR align="center">
+                    <TD>
+                    <TD>
+                    <TD>
+                    <TD><A HREF="https://geoguessr.com/famous-places/play" target="_blank"> Famous Places </A><BR><div class="important"> High Score</div> Boy <BR> 24,987
+                    <TD><div class="important">Expert High Score</div>Caleb Hanes Bender<BR> 4 minutes 11 seconds
+            </TABLE>
+        </Center>
+        <BR>
+        <BR>
+        <div class="important">Quick Links </div>
+        <ul class="BottomFont">
+            <li><A HREF="https://www.google.com/drive/" target="_blank">Google Drive</A></li>
+            <li><A HREF="http://www.qvsd.org" target="_blank">QVSD Home Page</A></li>
+            <li><A HREF="https://login.vt.edu/profile/cas/login?execution=e1s1" target="_blank">Hokie Spa</A></li>
+            <li><A HREF="https://www.ptable.com/" target="_blank">Periodic Table</A></li>
+
+        </ul>
+
+
+        -->
+
+    <CENTER>Page Last Modified by Travis Wiehe on Tuesday August 23, 2022</CENTER>
+
+
+
+
+</BODY>
+
+</HTML>
