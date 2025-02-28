@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snow Accumulation Range</title>
+    <script>
+        async function fetchSnowInfo() {
+            const urls = [
+                'https://forecast.weather.gov/MapClick.php?lon=-111.63002014160156&lat=40.58827637080219&FcstType=json',
+                'https://forecast.weather.gov/MapClick.php?lon=-111.6301918029785&lat=40.65547595359422&FcstType=json',
+                'https://forecast.weather.gov/MapClick.php?lon=-111.81681990623474&lat=40.7287120908814&FcstType=json'
+            ];
+
+            const locationNames = ['Alta', 'Spruces', 'Home'];
+
+            try {
+                let results = [];
+                const today = new Date();
+                const endDate = new Date();
+                endDate.setDate(today.getDate() + 3);
+                const endDateString = endDate.toLocaleDateString(undefined, { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+
+                for (const [index, url] of urls.entries()) {
+                    const response = await fetch(url);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+
+                    // Parse the snow accumulation data
+                    const details = data.data.text;
+                    let totalMin = 0;
+                    let totalMax = 0;
+
+                    details.forEach(detail => {
+                        const match = detail.match(/(\d+) to (\d+) inches/);
+                        if (match) {
+                            totalMin += parseInt(match[1]);
+                            totalMax += parseInt(match[2]);
+                        }
+                    });
+
+                    results.push({ location: locationNames[index], totalMin, totalMax });
+                }
+
+                // Display the result on the web page
+                const snowRangeElement = document.getElementById('snowRange');
+                snowRangeElement.innerHTML = results.map(result => 
+                    `${result.location}: ${result.totalMin} to ${result.totalMax} inches.`
+                ).join('<br>');
+
+                document.getElementById('snowMessage').textContent = `This range is calculated for the period between today and the end of the day on ${endDateString}.`;
+            } catch (error) {
+                document.getElementById('snowRange').textContent = 'Error fetching snow information: ' + error;
+            }
+        }
+
+        window.onload = fetchSnowInfo;
+    </script>
+</head>
+<body>
+    <h1>Snow Accumulation Forecast</h1>
+    <p id="snowRange">Loading snow information...</p>
+    <p id="snowMessage"></p>
+</body>
+</html>
