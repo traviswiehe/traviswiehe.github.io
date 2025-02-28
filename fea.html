@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>
+        Finite Element Analysis
+    </title>
+</head>
+
+<body>
+    <table width="100%">
+        <tr>
+            <th width="20%">
+
+            </th>
+            <th width="60%" style="font-size:30px">
+                <Center>Finite Element Analysis</Center>
+            </th>
+            <th width="20%">
+
+            </th>
+        </tr>
+        <tr>
+            <td width="20%"></td>
+            <td width="60%" style="font-size:18px">
+                The goal of this project was to redesign a linkage part for the given constraints. This part is created
+                from either 1020 cold-rolled steel or 1045 cold-drawn steel and is subject to fatigue cycling. The 4
+                main constraints were a max displacement of 0.0012” at point D, a fatigue factor of safety at point B >
+                1.2, a fatigue factor of safety at point C > 1.2, and to minimize weight. The changing variable was the
+                distance from the center of the part to the start of the fillet.
+                <img src="feadim.PNG" alt="Dimensions" class="image" style="width:100%">
+                I created the linkage in Solidworks with the variable dimension Lf. The part dimensions are listed in
+                the table below and are visible in the figure below. The final part model can be seen below.
+                <img src="feablank.PNG" alt="Dimensions" class="image" style="width:100%">
+                I then
+                created a static force simulation with the left face fixed and placed a force of 600 lb on the right
+                face. The stress results from this simulation with points B and C labeled is attached below. I then
+                repeated the static force simulation for each Lf and recorded the stress at points B and C.
+                <img src="feaforces.PNG" alt="Dimensions" class="image" style="width:100%">
+
+                Below are the results that I got from Solidworks. The max displacement in the linkage occurred at point
+                D when Lf was 0.5”.
+                <img src="feadis.jpg" alt="Dimensions" class="image" style="width:100%">
+                Point B and its respective point on the opposite side of the hole had the highest stress in the model
+                and is the critical section for fatigue design.
+                <img src="feacolor.PNG" alt="Dimensions" class="image" style="width:100%">
+                <img src="featable.PNG" alt="Dimensions" class="image" style="width:100%">
+                The data obtained from Solidworks was then inputted to MATLAB. Using MATLAB, the mean and alternating
+                stresses were calculated for each Lf. These stresses, along with the endurance stress and ultimate
+                stress of the material, were plugged into the Goodman equation to solve for the fatigue safety factor.
+                The fatigue safety factors for points B and C are listed below.
+                <img src="feafatigue.PNG" alt="Dimensions" class="image" style="width:100%">
+                All of the Lf lengths passed our initial constraint that the fatigue safety factor for point B must be
+                greater that 1.2. All the factors of safety at point C also passed the fatigue safety factor constraint.
+                As for the displacement the parts with Lf of 0.5” and 0.75” deformed more than the allowed 0.0012” so I
+                eliminated those from the final design. This left the 1” and 1.25” parts. Finally, I examined the weight
+                in the parts. The 1” part weighted less than the 1.25” part. With all this information I chose the part
+                with a Lf of 1”.
+
+
+            </td>
+            <td width="620%"></td>
+        </tr>
+</body>
+
+</html>

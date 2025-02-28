@@ -1,0 +1,12 @@
+HOW TO USE POWERSHELL
+1.) Open powershell use cd.. to move out to C:\
+then type cd "desktop"
+then type cd "firebase website"
+then type cd public
+
+2.) Type : firebase login
+3.) Use ls to show lists and cd to select the correct one
+4.) For two word folders you need to use quotes
+5.) Nagivate into the public folder (this should be the last word)
+6.) Type firebase deploy to launch the site
+7.) Party!
